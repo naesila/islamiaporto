@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naesila Islamia - Professional Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#f0f7ff",
+                100: "#e0effe",
+                200: "#bae2fd",
+                500: "#2563eb", // Almamater Royal Blue
+                600: "#1d4ed8",
+                700: "#1e40af",
+                900: "#1e3a8a",
+                950: "#0f172a",
+              },
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .glass-header {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .dark .glass-header {
+        background: rgba(15, 23, 42, 0.8);
+      }
+      .image-glow {
+        box-shadow: 0 0 50px -10px rgba(37, 99, 235, 0.4);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between overflow-x-hidden"
+  >
+    <!-- Header / Navigation -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-slate-200/80 dark:border-slate-800/80 glass-header transition-colors"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center space-x-2 group">
+          <span
+            class="text-2xl font-extrabold bg-gradient-to-r from-brand-500 to-indigo-500 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity"
+            >Naesila Islamia</span
+          >
+        </a>
+
+        <nav
+          class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide"
+        >
+          <a
+            href="#about"
+            class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors"
+            >Services</a
+          >
+          <a
+            href="#skills"
+            class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#portfolio"
+            class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors"
+            >Portfolio</a
+          >
+          <a
+            href="#journey"
+            class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors"
+            >Journey</a
+          >
+          <a
+            href="#achievements"
+            class="text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors"
+            >Achievements</a
+          >
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <!-- Dark Mode Toggle -->
+          <button
+            id="themeToggle"
+            class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-all focus:outline-none"
+            aria-label="Toggle Theme"
+          >
+            <i id="themeIcon" data-lucide="moon" class="w-5 h-5"></i>
+          </button>
+          <a
+            href="#contact"
+            class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-xl transition-all shadow-lg shadow-brand-500/20 hover:shadow-brand-500/30 transform hover:-translate-y-0.5"
+          >
+            Let's Talk
+          </a>
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobileMenuBtn"
+            class="p-2.5 md:hidden rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 text-slate-700 dark:text-slate-300"
+          >
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 z-40 bg-slate-950/60 backdrop-blur-sm hidden md:hidden"
+    >
+      <div
+        class="fixed top-24 right-4 left-4 p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl flex flex-col space-y-4 border border-slate-100 dark:border-slate-800"
+      >
+        <a
+          href="#about"
+          class="mobile-link py-2 text-base font-bold text-slate-800 dark:text-slate-200"
+          >About</a
+        >
+        <a
+          href="#services"
+          class="mobile-link py-2 text-base font-bold text-slate-800 dark:text-slate-200"
+          >Services</a
+        >
+        <a
+          href="#skills"
+          class="mobile-link py-2 text-base font-bold text-slate-800 dark:text-slate-200"
+          >Skills</a
+        >
+        <a
+          href="#portfolio"
+          class="mobile-link py-2 text-base font-bold text-slate-800 dark:text-slate-200"
+          >Portfolio</a
+        >
+        <a
+          href="#journey"
+          class="mobile-link py-2 text-base font-bold text-slate-800 dark:text-slate-200"
+          >Journey</a
+        >
+        <a
+          href="#achievements"
+          class="mobile-link py-2 text-base font-bold text-slate-800 dark:text-slate-200"
+          >Achievements</a
+        >
+        <hr class="border-slate-100 dark:border-slate-800" />
+        <a
+          href="#contact"
+          class="mobile-link w-full py-3.5 text-center text-sm font-bold text-white bg-brand-500 rounded-xl shadow-lg shadow-brand-500/20"
+          >Let's Talk</a
+        >
+      </div>
+    </div>
+
+    <main class="flex-grow">
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="relative py-16 lg:py-24 overflow-hidden flex items-center min-h-[85vh]"
+      >
+        <div
+          class="absolute top-1/4 left-10 w-80 h-80 bg-blue-500/15 dark:bg-blue-500/10 rounded-full blur-3xl -z-10 animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-10 w-96 h-96 bg-indigo-500/15 dark:bg-indigo-500/10 rounded-full blur-3xl -z-10 animate-pulse"
+        ></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Text Info Left -->
+            <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+              <div
+                class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-500 dark:text-brand-300 text-xs font-bold uppercase tracking-wider"
+              >
+                <i data-lucide="sparkles" class="w-4 h-4 text-brand-500"></i>
+                <span
+                  >Information Systems Student | Business Analyst &amp; Data Enthusiast</span
+                >
+              </div>
+              <h1
+                class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-none"
+              >
+                Hi, I'm <br />
+                <span class="text-brand-500 dark:text-brand-400"
+                  >Naesila Islamia</span
+                >
+              </h1>
+              <p
+                class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed"
+              >
+                Welcome to my portfolio! Here you can explore my projects,
+                experiences, and my contributions in creating structured and
+                meaningful digital solutions.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div
+                class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4"
+              >
+                <a
+                  href="#contact"
+                  class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-2xl transition-all shadow-xl shadow-brand-500/30 hover:shadow-brand-500/40 transform hover:-translate-y-1"
+                >
+                  Hire Me
+                </a>
+                <a
+                  href="#portfolio"
+                  class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 rounded-2xl transition-all shadow-md transform hover:-translate-y-1"
+                >
+                  Explore Portfolio
+                  <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Visual Right Side (Integrating naesila.jpeg verbatim) -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+              <div
+                class="relative w-80 h-80 sm:w-96 sm:h-[450px] lg:w-[420px] lg:h-[480px]"
+              >
+                <!-- Orbit Ring -->
+                <div
+                  class="absolute inset-0 rounded-[2.5rem] border border-dashed border-slate-300 dark:border-slate-700 animate-[spin_60s_linear_infinite]"
+                ></div>
+
+                <!-- Floating Tech Badges -->
+                <div
+                  class="absolute -top-4 left-6 p-3 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-150 dark:border-slate-700 animate-bounce"
+                >
+                  <i data-lucide="database" class="w-6 h-6 text-brand-500"></i>
+                </div>
+                <div
+                  class="absolute bottom-12 -left-6 p-3 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-150 dark:border-slate-700"
+                >
+                  <i data-lucide="mic" class="w-6 h-6 text-indigo-500"></i>
+                </div>
+                <div
+                  class="absolute top-1/2 -right-4 p-3 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-150 dark:border-slate-700"
+                >
+                  <i
+                    data-lucide="trending-up"
+                    class="w-6 h-6 text-emerald-500"
+                  ></i>
+                </div>
+
+                <!-- Avatar Frame with naesila.jpeg -->
+                <div
+                  class="absolute inset-4 rounded-[2.2rem] bg-gradient-to-tr from-brand-500 to-indigo-500 p-1 shadow-2xl overflow-hidden group image-glow"
+                >
+                  <div
+                    class="w-full h-full bg-slate-100 dark:bg-slate-800 rounded-[2rem] overflow-hidden relative"
+                  >
+                    <!-- Using the user's specific picture 'naesila.jpeg' -->
+                    <img
+                      src="naesila.jpeg"
+                      alt="Naesila Islamia"
+                      class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                      onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600'"
+                    />
+                    <!-- Elegant Dark Blue Tint Layer -->
+                    <div
+                      class="absolute inset-0 bg-brand-900/10 mix-blend-multiply"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me Section -->
+      <section
+        id="about"
+        class="py-20 bg-slate-100/50 dark:bg-slate-900/30 transition-colors"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+              <div
+                class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-500 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider"
+              >
+                <span>About Me</span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                Connecting Information Systems &amp; Strategic Solutions
+              </h2>
+              <p
+                class="text-slate-600 dark:text-slate-400 leading-relaxed text-justify"
+              >
+                An Information Systems student with a strong interest in data,
+                communication, and business development. Currently active
+                working with data by organizing, analyzing, and transforming it
+                into meaningful insights. I also have strong public speaking
+                skills and enjoy creating content, allowing me to communicate
+                ideas clearly and effectively. I am highly interested in roles
+                that combine analytical thinking and communication, such as Data
+                Analytics or business development roles.
+              </p>
+
+              <!-- Counters Layout -->
+              <div class="grid grid-cols-3 gap-4 pt-6">
+                <div
+                  class="p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-sm text-center"
+                >
+                  <span
+                    class="block text-3xl sm:text-4xl font-extrabold text-brand-500"
+                    >5+</span
+                  >
+                  <span
+                    class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium"
+                    >Projects Completed</span
+                  >
+                </div>
+                <div
+                  class="p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-sm text-center"
+                >
+                  <span
+                    class="block text-3xl sm:text-4xl font-extrabold text-brand-500"
+                    >10+</span
+                  >
+                  <span
+                    class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium"
+                    >Learning Experience</span
+                  >
+                </div>
+                <div
+                  class="p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-sm text-center"
+                >
+                  <span
+                    class="block text-3xl sm:text-4xl font-extrabold text-brand-500"
+                    >10+</span
+                  >
+                  <span
+                    class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium"
+                    >Organization Exp</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Side Attributes Block -->
+            <div class="lg:col-span-6 space-y-4">
+              <div
+                class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/50 dark:border-slate-800 shadow-sm"
+              >
+                <h4
+                  class="font-bold text-lg text-slate-800 dark:text-slate-100 flex items-center mb-2"
+                >
+                  <i
+                    data-lucide="award"
+                    class="w-5 h-5 text-brand-500 mr-2"
+                  ></i>
+                  Professional Goal
+                </h4>
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                  Information Systems student passionate about Data Analytics
+                  and IT Infrastructure. Experienced in public speaking and
+                  effective communication, with the ability to translate
+                  data-driven insights into actionable recommendations. Aspiring
+                  to grow as a Data Analyst, Solutions Architect, or Account
+                  Executive by connecting technical expertise with business
+                  needs and strategic goals.
+                </p>
+              </div>
+
+              <div
+                class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/50 dark:border-slate-800 shadow-sm"
+              >
+                <h4
+                  class="font-bold text-lg text-slate-800 dark:text-slate-100 flex items-center mb-2"
+                >
+                  <i
+                    data-lucide="graduation-cap"
+                    class="w-5 h-5 text-indigo-500 mr-2"
+                  ></i>
+                  Education Background
+                </h4>
+                <ul
+                  class="space-y-2 text-sm text-slate-500 dark:text-slate-400"
+                >
+                  <li class="flex justify-between">
+                    <strong
+                      >STT Terpadu Nurul Fikri (S1 Sistem Informasi)</strong
+                    >
+                    <span class="text-xs text-brand-500 font-bold"
+                      >Ongoing</span
+                    >
+                  </li>
+                  <li class="flex justify-between">
+                    <span>SMK Insan Madani (Otomatisasi Tata Kelola Perkantoran)</span>
+                    <span class="text-xs text-slate-400 font-semibold">Alumni</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Left Side text content -->
+            <div class="lg:col-span-4 space-y-6 lg:sticky lg:top-24 h-fit">
+              <div
+                class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-500 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider"
+              >
+                <span>My Focus</span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                My Expertise &amp; Skills
+              </h2>
+              <p class="text-slate-600 dark:text-slate-400">
+                Focused on analytical thinking and strategic communication to
+                transform raw data into actionable business insights. Interested
+                in pursuing roles as a Data Analyst, Business Analyst, Solutions
+                Architect, or Account Executive, bridging data, technology, and
+                business needs to drive informed decision-making.
+              </p>
+            </div>
+
+            <!-- Right Side Cards (Grid) -->
+            <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Data Analyst -->
+              <div
+                class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-md transition-all"
+              >
+                <div
+                  class="p-3 bg-brand-50 dark:bg-brand-950 text-brand-500 rounded-xl w-fit mb-4"
+                >
+                  <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Data Analyst</h3>
+                <p
+                  class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed"
+                >
+                  Skilled in analyzing datasets to identify patterns, trends,
+                  and insights that support data-driven business decisions.
+                </p>
+              </div>
+
+              <!-- Data Visualization -->
+              <div
+                class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-md transition-all"
+              >
+                <div
+                  class="p-3 bg-indigo-50 dark:bg-indigo-950 text-indigo-500 rounded-xl w-fit mb-4"
+                >
+                  <i data-lucide="pie-chart" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Data Visualization</h3>
+                <p
+                  class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed"
+                >
+                  Experienced in creating interactive dashboards and visual
+                  reports using tools such as Excel and Power BI to communicate
+                  insights effectively.
+                </p>
+              </div>
+
+              <!-- UX Research -->
+              <div
+                class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-md transition-all"
+              >
+                <div
+                  class="p-3 bg-purple-50 dark:bg-purple-950 text-purple-500 rounded-xl w-fit mb-4"
+                >
+                  <i data-lucide="search" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Business Analysis</h3>
+                <p
+                  class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed"
+                >
+                  Capable of understanding business requirements, identifying
+                  problems, and proposing technology-driven solutions that align
+                  with organizational goals.
+                </p>
+              </div>
+
+              <!-- Data Cleaning -->
+              <div
+                class="p-6 bg-white dark:bg-slate-950 rounded-2xl border border-slate-200/30 dark:border-slate-800 shadow-sm hover:shadow-md transition-all"
+              >
+                <div
+                  class="p-3 bg-emerald-50 dark:bg-emerald-950 text-emerald-500 rounded-xl w-fit mb-4"
+                >
+                  <i data-lucide="filter" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Data Cleaning</h3>
+                <p
+                  class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed"
+                >
+                  Experienced in organizing, validating, and transforming raw
+                  data into accurate and reliable datasets for analysis and
+                  reporting.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section
+        id="skills"
+        class="py-20 bg-slate-100/50 dark:bg-slate-900/30 transition-colors"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <div
+              class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-500 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider"
+            >
+              <span>Skills Metrics</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Technical Skills &amp; Proficiency
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400">
+              A summary of my technical and professional competencies developed through academic projects, organizational experiences, and hands-on learning.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Left Skills Block -->
+            <div
+              class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-sm"
+            >
+              <!-- Excel -->
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-bold text-sm">Excel</span>
+                  <span class="text-xs text-slate-500">90%</span>
+                </div>
+                <div
+                  class="w-full h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
+                >
+                  <div
+                    class="h-full bg-brand-500 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- SQL -->
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-bold text-sm">SQL</span>
+                  <span class="text-xs text-slate-500">85%</span>
+                </div>
+                <div
+                  class="w-full h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
+                >
+                  <div
+                    class="h-full bg-indigo-500 rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Power BI -->
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-bold text-sm">Power BI</span>
+                  <span class="text-xs text-slate-500">90%</span>
+                </div>
+                <div
+                  class="w-full h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
+                >
+                  <div
+                    class="h-full bg-brand-500 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Skills Block -->
+            <div
+              class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-sm"
+            >
+              <!-- Data Analysis -->
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-bold text-sm">Data Analysis</span>
+                  <span class="text-xs text-slate-500">90%</span>
+                </div>
+                <div
+                  class="w-full h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
+                >
+                  <div
+                    class="h-full bg-indigo-500 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Business Analysis -->
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-bold text-sm">Business Analysis</span>
+                  <span class="text-xs text-slate-500">90%</span>
+                </div>
+                <div
+                  class="w-full h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
+                >
+                  <div
+                    class="h-full bg-brand-500 rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Public Speaking -->
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-bold text-sm">Public Speaking</span>
+                  <span class="text-xs text-slate-500">95%</span>
+                </div>
+                <div
+                  class="w-full h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"
+                >
+                  <div
+                    class="h-full bg-indigo-500 rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
+            <div
+              class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-500 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider"
+            >
+              <span>My Portfolio</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              My Projects
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400">
+              Here are a few academic projects and strategic plans I've completed during my studies
+            </p>
+          </div>
+
+          <!-- Filters -->
+          <div class="flex flex-wrap justify-center gap-2 mb-12">
+            <button
+              onclick="filterPortfolio('all')"
+              class="port-btn px-5 py-2.5 text-sm font-bold rounded-xl border border-slate-200 dark:border-slate-800 bg-brand-500 text-white shadow-lg shadow-brand-500/20 transition-all"
+            >
+              all
+            </button>
+            <button
+              onclick="filterPortfolio('web')"
+              class="port-btn px-5 py-2.5 text-sm font-medium rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all text-slate-700 dark:text-slate-300"
+            >
+              Web Design
+            </button>
+            <button
+              onclick="filterPortfolio('app')"
+              class="port-btn px-5 py-2.5 text-sm font-medium rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all text-slate-700 dark:text-slate-300"
+            >
+              App Design
+            </button>
+            <button
+              onclick="filterPortfolio('research')"
+              class="port-btn px-5 py-2.5 text-sm font-medium rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all text-slate-700 dark:text-slate-300"
+            >
+              Research &amp; Market
+            </button>
+          </div>
+
+          <!-- Grid Portfolio -->
+          <div
+            id="portfolioGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <!-- E-commerce Platform -->
+            <div
+              class="port-card mix web bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden"
+                >
+                  <img
+                    src="web.jpeg"
+                    class="w-full h-full object-cover"
+                    alt="E-commerce Platform"
+                  />
+                  <span
+                    class="absolute top-4 left-4 bg-brand-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase"
+                    >Web Design / Testing</span
+                  >
+                </div>
+                <div class="p-6 space-y-2">
+                  <h3 class="font-bold text-lg">Student Marketplace Platform</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">
+                    Designed and developed a web-based marketplace that allows students to exchange, buy, and sell second-hand goods within the campus community. Focused on improving accessibility, user experience, and sustainable consumption among students.
+                  </p>
+                </div>
+              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <span class="text-xs font-bold text-brand-500">Academic Project</span>
+              </div>
+            </div>
+
+            <!-- Beauty App Design -->
+          <div
+              class="port-card mix app bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden"
+                >
+                  <img
+                    src="beauty.jpeg"
+                    class="w-full h-full object-cover"
+                    alt="Beauty App Design"
+                  />
+                  <span
+                    class="absolute top-4 left-4 bg-indigo-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase"
+                    >App Design</span
+                  >
+                </div>
+                <div class="p-6 space-y-2">
+                  <h3 class="font-bold text-lg">Know Ur Barrier</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">
+                   Designed a mobile application focused on skin barrier awareness and skincare education. Features include skin scanning, personalized skin condition analysis, and ingredient-based skincare recommendations tailored to users' needs.                  </p>
+                </div>
+              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <a href="https://www.figma.com/proto/llZwK91gkFFSV6QetcDM1a/design-kel.18?node-id=51-102&p=f&t=45nq8JApzXo0pMNH-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1049%3A3&show-proto-sidebar=1" target="_blank" class="text-xs font-bold text-indigo-500 hover:underline">Group Project</a>
+              </div>
+            </div>
+
+            <!-- Personal Page -->
+            <div
+              class="port-card mix web bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden"
+                >
+                  <img
+                    src="coffe.png"
+                    class="w-full h-full object-cover"
+                    alt="Personal Page"
+                  />
+                  <span
+                    class="absolute top-4 left-4 bg-brand-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase"
+                    >Web Design / Dev</span
+                  >
+                </div>
+                <div class="p-6 space-y-2">
+                  <h3 class="font-bold text-lg">CoffeShop Web</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">
+                  Developed a coffee shop website featuring menu exploration, product information, and an intuitive user interface to enhance the customer experience and support online business presence.                  </p>
+                </div>
+              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <span class="text-xs font-bold text-brand-500">Group Project</span>
+              </div>
+            </div>
+
+            <!-- Furniture Mobile App -->
+           <div
+     class="port-card mix app bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between"
+   >
+     <div>
+       <div
+         class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden"
+       >
+         <img
+           src="edukid.png"
+           class="w-full h-full object-cover"
+           alt="Furniture Mobile App"
+         />
+         <span
+           class="absolute top-4 left-4 bg-indigo-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase"
+           >E-Learning</span
+         >
+       </div>
+       <div class="p-6 space-y-2">
+         <h3 class="font-bold text-lg">Edukids</h3>
+         <p class="text-sm text-slate-500 dark:text-slate-400">
+           Designed an educational web platform that helps children develop numeracy skills through interactive learning materials, engaging activities, and a user-friendly interface.                  </p>
+       </div>
+     </div>
+     <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+       <a href="https://www.figma.com/proto/0yD4iUn96MDgTbe3Kmxs0k/Project-APSI?node-id=287-1199&t=EKeblSfj8i3ioHDn-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=287%3A1199&show-proto-sidebar=1" target="_blank" class="text-xs font-bold text-indigo-500 hover:underline">Group Project</a>
+     </div>
+   </div>
+ </div>
+</div>
+</section>
+
+      <!-- Organizational Journey Section -->
+      <section
+        id="journey"
+        class="py-20 bg-slate-100/50 dark:bg-slate-900/30 transition-colors"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <div
+              class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-500 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider"
+            >
+              <span>My Experience</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Organizational Journey
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400">
+              Exploring my experience in organizational roles, including leadership, collaboration, and contributing to impactful activities.
+            </p>
+          </div>
+
+          <!-- Timeline (Verbatim matching image_6fb80a.png) -->
+          <div
+            class="max-w-4xl mx-auto relative border-l-2 border-brand-200 dark:border-brand-900 pl-6 sm:pl-12 space-y-12"
+          >
+            <!-- BEM STT NF - Public Relations -->
+            <div class="relative">
+              <span
+                class="absolute -left-[35px] sm:-left-[59px] top-1.5 flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-brand-500 ring-4 ring-white dark:ring-slate-950 text-white"
+              >
+                <i data-lucide="users" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </span>
+              <div
+                class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-sm space-y-3"
+              >
+                <div class="flex flex-wrap justify-between items-start gap-2">
+                  <span
+                    class="text-xs font-bold text-brand-500 uppercase tracking-widest bg-brand-50 dark:bg-brand-900/30 px-3 py-1 rounded-full"
+                    >BEM STT NF</span
+                  >
+                  <span class="text-xs font-semibold text-slate-400"
+                    >2025 – 2026</span
+                  >
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100">Public Relations Staff</h3>
+                <p
+                  class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify"
+                >
+                  Created and managed organizational content for social media and publications. Contributed to communication strategies, content writing, information dissemination, and maintaining engagement between the organization and students.
+                </p>
+              </div>
+            </div>
+
+            <!-- BEM STT NF - Head of Student Advocacy -->
+            <div class="relative">
+              <span
+                class="absolute -left-[35px] sm:-left-[59px] top-1.5 flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-brand-500 ring-4 ring-white dark:ring-slate-950 text-white"
+              >
+                <i data-lucide="award" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </span>
+              <div
+                class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-sm space-y-3"
+              >
+                <div class="flex flex-wrap justify-between items-start gap-2">
+                  <span
+                    class="text-xs font-bold text-brand-500 uppercase tracking-widest bg-brand-50 dark:bg-brand-900/30 px-3 py-1 rounded-full"
+                    >BEM STT NF</span
+                  >
+                  <span class="text-xs font-semibold text-slate-400"
+                    >2026 – 2027</span
+                  >
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100">Head of Student Advocacy Department</h3>
+                <p
+                  class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify"
+                >
+                  Led the Student Advocacy Department in representing student interests and facilitating communication between students and the Student Affairs Office. Responsible for collecting, managing, and conveying student aspirations while promoting constructive dialogue and problem-solving.
+                </p>
+              </div>
+            </div>
+
+            <!-- Panti Goceng - External Relation -->
+            <div class="relative">
+              <span
+                class="absolute -left-[35px] sm:-left-[59px] top-1.5 flex h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-indigo-500 ring-4 ring-white dark:ring-slate-950 text-white"
+              >
+                <i data-lucide="heart" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </span>
+              <div
+                class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-sm space-y-3"
+              >
+                <div class="flex flex-wrap justify-between items-start gap-2">
+                  <span
+                    class="text-xs font-bold text-indigo-500 uppercase tracking-widest bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full"
+                    >Panti Goceng Jakarta</span
+                  >
+                  <span class="text-xs font-semibold text-slate-400"
+                    >2025 – 2027</span
+                  >
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100">External Relation</h3>
+                <p
+                  class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify"
+                >
+                  Supported organizational development through strategic planning, partnership initiatives, and community engagement programs. Contributed ideas and recommendations to improve collaboration with external organizations and strengthen program impact.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Journey Kepanitiaan Section -->
+      <section
+        id="committee-journey"
+        class="py-20 bg-white dark:bg-slate-950 transition-colors"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <div
+              class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-wider"
+            >
+              <span>Committees</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Event Experience
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400">
+              Highlighting experiences that have strengthened my leadership, communication, collaboration, and problem-solving skills through academic, organizational, and community involvement.
+            </p>
+          </div>
+
+          <!-- Committee Grid Cards (100% Mobile Responsive) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Event Astro 7.0 -->
+            <div
+              class="bg-slate-50 dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <div class="h-48 overflow-hidden relative bg-slate-200 dark:bg-slate-800">
+                  <img
+                    src="astro.jpeg"
+                    alt="Event Astro 7.0"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div class="absolute top-4 left-4 bg-brand-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                    Event Team
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <div class="flex items-center justify-between text-xs text-slate-400 font-semibold">
+                    <span>Kompetisi Lomba Festival Kampus</span>
+                    <span>2025</span>
+                  </div>
+                  <h3 class="font-extrabold text-lg text-slate-800 dark:text-slate-100">Astro 7.0</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
+                    Contributed to the planning, coordination, and execution of ASTRO 7.0 activities. Collaborated with team members to ensure smooth event operations, support participant engagement, and help deliver a well-organized and impactful experience.                  </p>
+                </div>
+              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-brand-500 font-bold">
+                <span>STT Terpadu Nurul Fikri</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+            <!-- LO International Campus Talk -->
+            <div
+              class="bg-slate-50 dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <div class="h-48 overflow-hidden relative bg-slate-200 dark:bg-slate-800">
+                  <img
+                    src="laison.jpeg"
+                    alt="LO International Campus Talk"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div class="absolute top-4 left-4 bg-indigo-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                    Liaison Officer
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <div class="flex items-center justify-between text-xs text-slate-400 font-semibold">
+                    <span>International Talk</span>
+                    <span>2025</span>
+                  </div>
+                  <h3 class="font-extrabold text-lg text-slate-800 dark:text-slate-100">LO International Campus Talk</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
+                      Supported the successful implementation of the International Campus Talk by serving as a Liaison Officer, coordinating speaker requirements, managing schedules, facilitating communication, and ensuring a seamless experience for all participants.                  </p>
+                </div>
+              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-indigo-500 font-bold">
+                <span>BEM STT NF</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+            <!-- Humas Mental Health -->
+            <div
+              class="bg-slate-50 dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <div class="h-48 overflow-hidden relative bg-slate-200 dark:bg-slate-800">
+                  <img
+                    src="studi.jpeg"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div class="absolute top-4 left-4 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                    Public Relations
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <div class="flex items-center justify-between text-xs text-slate-400 font-semibold">
+                    <span>Public Relations</span>
+                    <span>2025</span>
+                  </div>
+                  <h3 class="font-extrabold text-lg text-slate-800 dark:text-slate-100">Public Relations Studi Banding</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
+                    Managed communication and promotional activities for a Mental Health Seminar. Responsible for disseminating event information, engaging participants, and supporting outreach efforts to increase awareness and participation.                  </p>
+                </div>
+              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-emerald-500 font-bold">
+                <span>BEM LP3i X BEM STT NF</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+             <!-- Humas Mental Health -->
+            <div
+              class="bg-slate-50 dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <div class="h-48 overflow-hidden relative bg-slate-200 dark:bg-slate-800">
+                  <img
+                    src="mental.jpeg"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div class="absolute top-4 left-4 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                    Public Relations
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <div class="flex items-center justify-between text-xs text-slate-400 font-semibold">
+                    <span>Public Relations</span>
+                    <span>2025</span>
+                  </div>
+                  <h3 class="font-extrabold text-lg text-slate-800 dark:text-slate-100">Public Relations Mental Health</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
+                    Managed communication and promotional activities for a Mental Health Seminar. Responsible for disseminating event information, engaging participants, and supporting outreach efforts to increase awareness and participation.                  </p>
+                </div>
+              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-emerald-500 font-bold">
+                <span>BEM STT NF</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+<!-- Humas Mental Health -->
+            <div
+              class="bg-slate-50 dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <div class="h-48 overflow-hidden relative bg-slate-200 dark:bg-slate-800">
+                  <img
+                    src="ldmkm.jpeg"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div class="absolute top-4 left-4 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                    Public Relations
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <div class="flex items-center justify-between text-xs text-slate-400 font-semibold">
+                    <span>Public Relations</span>
+                    <span>2025</span>
+                  </div>
+                  <h3 class="font-extrabold text-lg text-slate-800 dark:text-slate-100">Public Relations LDMKM</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
+                    Served as a Public Relations committee member, responsible for managing event communications, disseminating information, and maintaining engagement with participants to support the successful implementation of the program.                </div>
+              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-emerald-500 font-bold">
+                <span>ORMAWA STT NF</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+             <!-- Astro -->
+            <div
+              class="bg-slate-50 dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <div class="h-48 overflow-hidden relative bg-slate-200 dark:bg-slate-800">
+                  <img
+                    src="promosi.jpeg"
+                    alt="LO International Campus Talk"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div class="absolute top-4 left-4 bg-indigo-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                    Content Talent
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <div class="flex items-center justify-between text-xs text-slate-400 font-semibold">
+                    <span>Content Talent – ASTRO 7.0</span>
+                    <span>2025</span>
+                  </div>
+                  <h3 class="font-extrabold text-lg text-slate-800 dark:text-slate-100">Content Talent – ASTRO 7.0</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
+                    Appeared in promotional content for ASTRO 7.0, supporting event branding and engagement across digital platforms.                </div>
+              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-indigo-500 font-bold">
+                <span>ASTRO 7.0</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+             <!-- lentera -->
+            <div
+              class="bg-slate-50 dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <div class="h-48 overflow-hidden relative bg-slate-200 dark:bg-slate-800">
+                  <img
+                    src="lentera.jpeg"
+                    alt=""
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div class="absolute top-4 left-4 bg-indigo-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                    Lentera
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <div class="flex items-center justify-between text-xs text-slate-400 font-semibold">
+                    <span>Event Division – Lentera</span>
+                    <span>2026</span>
+                  </div>
+                  <h3 class="font-extrabold text-lg text-slate-800 dark:text-slate-100">Event Division – Lentera</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
+                    Coordinated event activities to support meaningful community engagement
+                </div>
+              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-indigo-500 font-bold">
+                <span>PANTI GOCENG JAKARTA</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+            <!-- Humas Mental Health -->
+            <div
+              class="bg-slate-50 dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200/50 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group"
+            >
+              <div>
+                <div class="h-48 overflow-hidden relative bg-slate-200 dark:bg-slate-800">
+                  <img
+                    src="unj.jpeg"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div class="absolute top-4 left-4 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow">
+                    Public Relations
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <div class="flex items-center justify-between text-xs text-slate-400 font-semibold">
+                    <span>Public Relations</span>
+                    <span>2025</span>
+                  </div>
+                  <h3 class="font-extrabold text-lg text-slate-800 dark:text-slate-100">Public Relations Sharing Inspiratif</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed text-justify">
+                    Supported communication and outreach efforts for Sharing Inspiratif and Benchmarking programs through information dissemination, participant engagement, and event promotion.              </div>
+              <div class="px-6 pb-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-emerald-500 font-bold">
+                <span>STUDI BANDING WITH BEM UNJ</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements Section -->
+      <section id="achievements" class="py-20 bg-slate-100/50 dark:bg-slate-900/30 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <div
+              class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-500 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider"
+            >
+              <span>Achievements</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Prestasi &amp; Apresiasi
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400">
+              Highlighting my key achievements through impactful contributions, leadership experiences, and continuous growth.
+            </p>
+          </div>
+
+          <!-- Achievements Grid with Local Images & Fallbacks -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Google Student Ambassador -->
+            <div
+              class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden group hover:shadow-xl transition-all"
+            >
+              <div class="space-y-4">
+                <div class="h-48 -mx-6 -mt-6 mb-4 overflow-hidden relative bg-slate-100 dark:bg-slate-800">
+                  <!-- PEMANGGILAN FOTO PRESTASI GOOGLE AMBASSADOR -->
+                  <img
+                    src="google-ambassador.jpeg"
+                    alt="Google Student Ambassador"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600'"
+                  />
+                  <div class="absolute top-4 left-4 p-2.5 bg-blue-600 text-white rounded-xl shadow-md">
+                    <i data-lucide="chrome" class="w-5 h-5"></i>
+                  </div>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800 dark:text-slate-100">Google Student Ambassador</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                  Selected as a Google Student Ambassador 2026 from over 81,000 applicants across Indonesia. Representing Google on campus through educational initiatives, technology workshops, and community engagement programs while promoting digital innovation among students.
+              </div>
+              <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-bold text-brand-500 flex justify-between items-center">
+                <span>2026</span>
+                <span class="text-[10px] bg-blue-50 dark:bg-blue-950/40 text-blue-600 px-2.5 py-1 rounded-full font-bold uppercase">Ambassador</span>
+              </div>
+            </div>
+
+            <!-- Juara 1 Debat Rakyat Kampus (Menggunakan debat-kampus.png) -->
+            <div
+              class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden group hover:shadow-xl transition-all"
+            >
+              <div class="space-y-4">
+                <div class="h-48 -mx-6 -mt-6 mb-4 overflow-hidden relative bg-slate-100 dark:bg-slate-800">
+                  <!-- PEMANGGILAN FOTO PRESTASI DEBAT KAMPUS -->
+                  <img
+                    src="debat-kampus.png"
+                    alt="Juara 1 Debat Rakyat Kampus"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onerror="this.src='https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=600'"
+                  />
+                  <div class="absolute top-4 left-4 p-2.5 bg-yellow-500 text-white rounded-xl shadow-md">
+                    <i data-lucide="trophy" class="w-5 h-5"></i>
+                  </div>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800 dark:text-slate-100">Juara 1 Debat Rakyat Kampus</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                  Awarded 1st Place in a university-level public debate competition, demonstrating strong critical thinking, public speaking, and evidence-based argumentation skills.
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-bold text-brand-500 flex justify-between items-center">
+                <span>2025</span>
+                <span class="text-[10px] bg-yellow-50 dark:bg-yellow-950/40 text-yellow-600 px-2.5 py-1 rounded-full font-bold uppercase">Juara 1</span>
+              </div>
+            </div>
+             <!-- Juara 1 Debat Rakyat Kampus (Menggunakan debat-kampus.png) -->
+            <div
+              class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden group hover:shadow-xl transition-all"
+            >
+              <div class="space-y-4">
+                <div class="h-48 -mx-6 -mt-6 mb-4 overflow-hidden relative bg-slate-100 dark:bg-slate-800">
+                  <!-- PEMANGGILAN FOTO PRESTASI DEBAT KAMPUS -->
+                  <img
+                    src="debat.jpeg"
+                    alt="Juara 3 Debat Rakyat Kampus"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onerror="this.src='https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=600'"
+                  />
+                  <div class="absolute top-4 left-4 p-2.5 bg-yellow-500 text-white rounded-xl shadow-md">
+                    <i data-lucide="trophy" class="w-5 h-5"></i>
+                  </div>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800 dark:text-slate-100">Juara 3 Debat Rakyat Kampus</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                  Earned 3rd Place in a university-level public debate competition through analytical reasoning, effective communication, and well-structured arguments on public issues.
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-bold text-brand-500 flex justify-between items-center">
+                <span>2024</span>
+                <span class="text-[10px] bg-yellow-50 dark:bg-yellow-950/40 text-yellow-600 px-2.5 py-1 rounded-full font-bold uppercase">Juara 3</span>
+              </div>
+            </div>
+
+            <!-- Brand Ambassador MySkill.id -->
+            <div
+              class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-sm flex flex-col justify-between overflow-hidden group hover:shadow-xl transition-all"
+            >
+              <div class="space-y-4">
+                <div class="h-48 -mx-6 -mt-6 mb-4 overflow-hidden relative bg-slate-100 dark:bg-slate-800">
+                  <!-- PEMANGGILAN FOTO PRESTASI BRAND AMBASSADOR MYSKILL -->
+                  <img
+                    src="myskill-ba.jpeg"
+                    alt="Brand Ambassador MySkill.id"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onerror="this.src='https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=600'"
+                  />
+                  <div class="absolute top-4 left-4 p-2.5 bg-purple-600 text-white rounded-xl shadow-md">
+                    <i data-lucide="award" class="w-5 h-5"></i>
+                  </div>
+                </div>
+                <h3 class="font-bold text-lg text-slate-800 dark:text-slate-100">Brand Ambassador MySkill.id</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                  Selected as a Brand Ambassador to promote digital learning opportunities, support student development initiatives, and connect learners with career-focused educational programs.
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-bold text-brand-500 flex justify-between items-center">
+                <span>2026</span>
+                <span class="text-[10px] bg-purple-50 dark:bg-purple-950/40 text-purple-600 px-2.5 py-1 rounded-full font-bold uppercase">Ambassador</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section
+        id="testimonials"
+        class="py-20 bg-slate-100/50 dark:bg-slate-900/30 transition-colors overflow-hidden"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <div
+              class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-500 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider"
+            >
+              <span>Testimonials</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Rekomendasi Rekan Kerja
+            </h2>
+          </div>
+
+          <!-- Slider Container -->
+          <div class="max-w-3xl mx-auto relative px-8">
+            <div class="overflow-hidden">
+              <div
+                id="testimonialSlider"
+                class="flex transition-transform duration-500 ease-in-out"
+                style="transform: translateX(0%)"
+              >
+                <!-- Slide 1 -->
+                <div class="w-full flex-shrink-0 px-4">
+                  <div
+                    class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-sm text-center space-y-4"
+                  >
+                    <i
+                      data-lucide="quote"
+                      class="w-10 h-10 text-brand-500 mx-auto opacity-30"
+                    ></i>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 italic">
+                      "Naesila has an incredible ability to balance technical structure with creative delivery. When working together in event coordination, her public speaking was flawless, engaging everyone, while her data reporting was clear and highly actionable."
+                    </p>
+                    <div>
+                      <h4 class="font-bold text-slate-800 dark:text-slate-100">
+                        Alfian Nugraha
+                      </h4>
+                      <span class="text-xs text-slate-400"
+                        >Project Officier of, Astro Competition</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="w-full flex-shrink-0 px-4">
+                  <div
+                    class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 shadow-sm text-center space-y-4"
+                  >
+                    <i
+                      data-lucide="quote"
+                      class="w-10 h-10 text-indigo-500 mx-auto opacity-30"
+                    ></i>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 italic">
+                      "Her work as External Relation at Panti Goceng was outstanding. Naesila is not only brilliant in communicating with public donors but also meticulously organized in managing programs."
+                    </p>
+                    <div>
+                      <h4 class="font-bold text-slate-800 dark:text-slate-100">
+                        Nabila Putri Sahida
+                      </h4>
+                      <span class="text-xs text-slate-400"
+                        >Vice President of, BEM STT NF</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide Navigation -->
+            <button
+              onclick="prevTestimonial()"
+              class="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full border border-slate-200 dark:border-slate-700 shadow-sm transition-all text-slate-700 dark:text-slate-300"
+              aria-label="Previous Testimonial"
+            >
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button
+              onclick="nextTestimonial()"
+              class="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full border border-slate-200 dark:border-slate-700 shadow-sm transition-all text-slate-700 dark:text-slate-300"
+              aria-label="Next Testimonial"
+            >
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <div
+              class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-500 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider"
+            >
+              <span>Get In Touch</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Let's Connect            </h2>
+            <p class="text-slate-500 dark:text-slate-400">
+              Open to collaboration, learning opportunities, and discussions related to technology, data analytics, and business innovation.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
+            <!-- Details Left -->
+            <div class="lg:col-span-5 space-y-6">
+              <div
+                class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800 shadow-sm flex items-center space-x-4"
+              >
+                <div
+                  class="p-3 bg-brand-50 dark:bg-brand-950 text-brand-500 rounded-xl"
+                >
+                  <i data-lucide="mail" class="w-6 h-6"></i>
+                </div>
+                <div class="flex-grow">
+                  <span class="block text-xs text-slate-400 font-semibold uppercase"
+                    >Email</span
+                  >
+                  <a
+                    href="mailto:naesila99@gmail.com"
+                    class="text-sm font-bold text-slate-800 dark:text-slate-100 hover:text-brand-500"
+                    >naesila99@gmail.com</a
+                  >
+                </div>
+                <button
+                  onclick="copyContact('naesila99@gmail.com', 'email')"
+                  class="p-2 text-slate-400 hover:text-brand-500 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                  title="Salin Email"
+                >
+                  <i data-lucide="copy" class="w-4 h-4"></i>
+                </button>
+              </div>
+
+              <div
+                class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800 shadow-sm flex items-center space-x-4"
+              >
+                <div
+                  class="p-3 bg-indigo-50 dark:bg-indigo-950 text-indigo-500 rounded-xl"
+                >
+                  <i data-lucide="phone" class="w-6 h-6"></i>
+                </div>
+                <div class="flex-grow">
+                  <span class="block text-xs text-slate-400 font-semibold uppercase"
+                    >WhatsApp</span
+                  >
+                  <a
+                    href="tel:+6281514124732"
+                    class="text-sm font-bold text-slate-800 dark:text-slate-100 hover:text-brand-500"
+                    >+62 815 1412 4732</a
+                  >
+                </div>
+                <button
+                  onclick="copyContact('+6281514124732', 'telepon')"
+                  class="p-2 text-slate-400 hover:text-brand-500 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                  title="Salin Nomor"
+                >
+                  <i data-lucide="copy" class="w-4 h-4"></i>
+                </button>
+              </div>
+
+              <div
+                class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800 shadow-sm flex items-center space-x-4"
+              >
+                <div
+                  class="p-3 bg-purple-50 dark:bg-purple-950 text-purple-500 rounded-xl"
+                >
+                  <i data-lucide="map-pin" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <span class="block text-xs text-slate-400 font-semibold uppercase"
+                    >Lokasi</span
+                  >
+                  <span class="text-sm font-bold text-slate-800 dark:text-slate-100"
+                    >Jagakarsa, Jakarta Selatan</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form Right -->
+            <div
+              class="lg:col-span-7 bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/50 dark:border-slate-800 shadow-sm"
+            >
+              <form
+                id="contactForm"
+                onsubmit="handleFormSubmit(event)"
+                class="space-y-4"
+              >
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-2">
+                    <label class="text-xs font-bold text-slate-400 uppercase"
+                      >Nama Lengkap</label
+                    >
+                    <input
+                      type="text"
+                      id="formName"
+                      required
+                      class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all text-sm text-slate-800 dark:text-slate-100"
+                    />
+                  </div>
+                  <div class="space-y-2">
+                    <label class="text-xs font-bold text-slate-400 uppercase"
+                      >Alamat Email</label
+                    >
+                    <input
+                      type="email"
+                      id="formEmail"
+                      required
+                      class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all text-sm text-slate-800 dark:text-slate-100"
+                    />
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label class="text-xs font-bold text-slate-400 uppercase"
+                    >Subjek</label
+                  >
+                  <input
+                    type="text"
+                    id="formSubject"
+                    required
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all text-sm text-slate-800 dark:text-slate-100"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label class="text-xs font-bold text-slate-400 uppercase"
+                    >Pesan Anda</label
+                  >
+                  <textarea
+                    id="formMessage"
+                    rows="4"
+                    required
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all text-sm resize-none text-slate-800 dark:text-slate-100"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl transition-all shadow-lg shadow-brand-500/20 hover:shadow-brand-500/35 flex items-center justify-center space-x-2"
+                >
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Kirim Pesan</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors py-12 text-center"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <h3
+          class="text-lg font-extrabold bg-gradient-to-r from-brand-500 to-indigo-500 bg-clip-text text-transparent uppercase tracking-wider"
+        >
+          Naesila Islamia
+        </h3>
+        <p class="text-xs text-slate-400">
+          &copy; 2026 Naesila Islamia. Seluruh hak cipta dilindungi.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div
+      id="toast"
+      class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 p-4 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-2xl flex items-center space-x-3 text-sm"
+    >
+      <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500"></i>
+      <span id="toastMessage">Berhasil disalin!</span>
+    </div>
+
+    <!-- Interactive Script logic -->
+    <script>
+      // Init Lucide Icons
+      lucide.createIcons();
+
+      // Dark/Light Theme logic
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+        themeIcon.setAttribute("data-lucide", "sun");
+      } else {
+        document.documentElement.classList.remove("dark");
+        themeIcon.setAttribute("data-lucide", "moon");
+      }
+      lucide.createIcons();
+
+      themeToggle.addEventListener("click", () => {
+        if (document.documentElement.classList.contains("dark")) {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+          themeIcon.setAttribute("data-lucide", "moon");
+        } else {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+          themeIcon.setAttribute("data-lucide", "sun");
+        }
+        lucide.createIcons();
+      });
+
+      // Mobile Menu
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Portfolio Filtering
+      function filterPortfolio(category) {
+        const buttons = document.querySelectorAll(".port-btn");
+        buttons.forEach((btn) => {
+          btn.className =
+            "port-btn px-5 py-2.5 text-sm font-medium rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all text-slate-700 dark:text-slate-300";
+        });
+
+        event.target.className =
+          "port-btn px-5 py-2.5 text-sm font-bold rounded-xl border border-slate-200 dark:border-slate-800 bg-brand-500 text-white shadow-lg shadow-brand-500/20 transition-all";
+
+        const cards = document.querySelectorAll(".port-card");
+        cards.forEach((card) => {
+          if (category === "all" || card.classList.contains(category)) {
+            card.style.display = "flex";
+            setTimeout(() => {
+              card.style.opacity = "1";
+              card.style.transform = "scale(1)";
+            }, 50);
+          } else {
+            card.style.opacity = "0";
+            card.style.transform = "scale(0.95)";
+            setTimeout(() => {
+              card.style.display = "none";
+            }, 200);
+          }
+        });
+      }
+
+      // Copy Contact details to Clipboard
+      function copyContact(text, type) {
+        const tempInput = document.createElement("input");
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        showToast(`${type.toUpperCase()} Naesila berhasil disalin!`);
+      }
+
+      // Show Toast Notification
+      function showToast(message) {
+        const toast = document.getElementById("toast");
+        const toastMessage = document.getElementById("toastMessage");
+        toastMessage.textContent = message;
+
+        toast.classList.remove("translate-y-20", "opacity-0");
+        toast.classList.add("translate-y-0", "opacity-100");
+
+        setTimeout(() => {
+          toast.classList.add("translate-y-20", "opacity-0");
+          toast.classList.remove("translate-y-0", "opacity-100");
+        }, 3000);
+      }
+
+      // Contact Form Handling (Simulation)
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById("formName").value;
+        showToast(`Terima kasih ${name}, pesan Anda berhasil dikirim!`);
+        document.getElementById("contactForm").reset();
+      }
+
+      // Testimonial Slider
+      let currentSlide = 0;
+      const totalSlides = 2; // Slide 1 & Slide 2
+
+      function updateSlider() {
+        const slider = document.getElementById("testimonialSlider");
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+
+      function nextTestimonial() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+      }
+
+      // Prev Slide
+      function prevTestimonial() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+    </script>
+  </body>
+</html>
